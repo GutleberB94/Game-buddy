@@ -8,8 +8,10 @@
 </head>
 <body>
     
-</body>
-</html>
+<h1>This is Survey page</h1>
+
+
+
 
 
 <script type="text/javascript">
@@ -24,5 +26,11 @@
         customerEmail: $("#reserve-email").val().trim(),
         customerID: $("#reserve-unique-id").val().trim()
       };
+
+      $.post('/api/friends',newReservation,function(data){
+        console.log(data)
+      })
     });
       </script>
+      </body>
+      </html>

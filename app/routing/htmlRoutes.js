@@ -16,10 +16,13 @@ module.exports = function(app) {
     // HTML GET Requests
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
   
   app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "survery.html"));
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
+  });
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 };
