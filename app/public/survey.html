@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script type="text/javascript">
+  
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+  
+      // Here we grab the form elements
+      var newReservation = {
+        customerName: $("#reserve-name").val().trim(),
+        phoneNumber: $("#reserve-phone").val().trim(),
+        customerEmail: $("#reserve-email").val().trim(),
+        customerID: $("#reserve-unique-id").val().trim()
+      };
+    });
+      </script>
